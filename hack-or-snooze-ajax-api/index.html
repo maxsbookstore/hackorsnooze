@@ -13,17 +13,23 @@
 
 <body>
   <nav>
-    <b><a class="nav-link navbar-brand" href="#" id="nav-all">Hack or Snooze</a></b>
-    <a class="nav-link nav-right" href="#" id="nav-login">login/create user</a>
+    <b><a class="nav-link navbar-brand" href="#" id="nav-all">Hack or Snooze </a></b>
+    <a class="nav-link hidden" href="#" id="post-story">Post Story</a>
+    <a class="nav-link hidden" href="#" id="favorites">Favorites</a>
+    <a class="nav-link hidden" href="#" id="my-stories">My Stories</a>
+
+    <a class="nav-link nav-right" href="#" id="nav-login">Login / Create User</a>
     <span class="nav-link nav-right hidden" id="nav-welcome">
       <a href="#" id="nav-user-profile"></a>
     </span>
-    <a class="hidden" id="nav-logout" href="#">
-      <small>(logout)</small>
-    </a>
+    <a class="hidden nav-link nav-right" id="nav-logout" href="#">Logout</a>
+
   </nav>
+
+
   <section class="articles-container container">
-    <form action="" class="hidden" id="submit-form">
+
+    <form action="#" class="hidden" id="create-story-form">
       <div>
         <label for="author">author</label>
         <input id="author" required type="text" placeholder="author name">
@@ -39,6 +45,7 @@
       <button type="submit">submit</button>
       <hr>
     </form>
+
     <article>
       <ol id="all-articles-list" class="articles-list">
         <h3>Loading...</h3>
@@ -68,6 +75,7 @@
     </form>
   </section>
   <section class="account-forms-container container">
+    <div class="alert hidden" id="general-login-alert">You must be logged in to do that</div>
     <form action="#" id="login-form" class="account-form hidden" method="post">
       <h4>Login</h4>
       <div class="login-input">
@@ -79,6 +87,7 @@
         <input id="login-password" type="password">
       </div>
       <button type="submit">login</button>
+      <div class="alert hidden" id="login-alert">Alert message will go here</div>
       <hr>
     </form>
     <form action="#" id="create-account-form" class="account-form hidden" method="post">
@@ -96,6 +105,8 @@
         <input id="create-account-password" type="password">
       </div>
       <button type="submit">create account</button>
+      <div class="alert hidden" id="signup-alert">Alert message will go here</div>
+
     </form>
   </section>
   <section id="user-profile" class="container hidden">
@@ -110,7 +121,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
-<script src="api-classes.js"></script>
-<script src="ui.js"></script>
+<script type="text/javascript" src="api-classes.js"></script>
+<script type="text/javascript" src="ui.js"></script>
 
 </html>
